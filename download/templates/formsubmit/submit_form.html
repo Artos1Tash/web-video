@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Form</title>
+    <link rel="stylesheet" href="{% static 'css/submit.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="main">
+        <div class="left">
+            <h1>Youtube video downloader</h1>
+        </div>
+        
+        <div class="right">
+            <form class="form" method="post">
+                <p></p>
+                <label><b>Download</b>      <i class="fa fa-youtube-play" style="font-size: 1rem"></i></label>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Let`s go</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
